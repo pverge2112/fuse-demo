@@ -1,14 +1,25 @@
-= Red Hat Fuse Workshop application
+= Red Hat Fuse Demo application
 
-This is a Red Hat Fuse (Camel) project to use with Red Hat workshop. 
+This is a Red Hat Fuse (Camel) project to use for general demos. 
 
-All the labs instructions https://github.com/hodrigohamalho/fuse-workshop-doc[are here].
+= Integration with Files and SFTP
 
-== Running project locally 
+Some basic concepts of Camel, with a use case with FILE and SFTP components doing some basic transformations with POJO, XML and JSON.
+
+Contents covered during this lab
+
+* Content-Based Router pattern
+* XML and JSON transformation
+* File component
+* FTP component
+* Processor
+
+== Running project locally
+
+=== Run a docker sftp container then run project
+    
+    docker run -p 23:22 -d atmoz/sftp foo:pass:::fuse-demo
 
     mvn spring-boot:run
 
-== Deploy on openshift 
-
-    mvn fabric8:deploy -Popenshift -DskipTests
 
